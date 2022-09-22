@@ -104,7 +104,7 @@ User@localhost:~$ sudo chage dave -I 30
 ```
 17.
 ```console
-L'interpreteur de commande root est sudo.
+L'interpreteur de commande root est /bin/bash.
 ```
 18.
 ```console
@@ -118,3 +118,16 @@ Il s'agit de la commande sudo -k.
 
 **Exercice 2**
 
+1. 
+```console
+User@localhost:/home$ sudo mkdir test
+User@localhost:/home/test$ sudo touch fichier.txt
+```
+2. 
+```console
+User@localhost:/home$ sudo chmod 000 fichier.txt
+```
+3. 
+```console
+
+```
