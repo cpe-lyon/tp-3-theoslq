@@ -125,9 +125,71 @@ User@localhost:/home/test$ sudo touch fichier.txt
 ```
 2. 
 ```console
-User@localhost:/home$ sudo chmod 000 fichier.txt
+User@localhost:/home/test$ sudo chmod 000 fichier.txt
+Conclusion : root peut toujours l'ouvrir. 
 ```
 3. 
 ```console
-
+User@localhost:/home/test$ echo "echo Hello" > fichier
+Les droits seront les mêmes que ceux du fichier.
+```
+4. 
+```console
+On peut executer le fichier dans les 2 cas.
+```
+5. 
+```console
+Si nous n'avons aucun droit dans le repertoire, il est impossible d'y voir son contenu, d'ecrire/lire sur ses fichiers existants.
+```
+6. 
+```console
+La suppression d'un fichier dépend des permissions du dossier et non pas des permissions du fichiers
+```
+7. 
+```console
+Si l'on enleve le droit d'execution, on ne peut plus modifier ni rentrer dans le dossier correspondant
+```
+8. 
+```console
+On ne peut sortir du repertoire.
+Grace a cd .. on peut y en sortir, car cette commande ne depend pas du repertoire ou l'on se trouve
+```
+9. 
+```console
+User@localhost:/home/test$ chmod +x ./
+User@localhost:/home/test$ chmod 751 fichier.txt
+```
+10. 
+```console
+umask = 277
+```
+11. 
+```console
+umask = 022 (fichiers)
+umask = 266 (dossier)
+```
+12. 
+```console
+umask = 057
+umask = 046
+```
+13. 
+```console
+1) umask 136
+2) umask 2 2 4
+3) --x r-- -w-
+4) umask 1 3 6
+```
+14. 
+```console
+Tout le monde peut lire /etc/passwd
+Les mots de passe étant cryptés, ce n'est pas grave si tout le monde a acces a ce fichier
+```
+15. 
+```console
+Access Control Lists (a faire plus tard)
+```
+16. 
+```console
+Quotas disques (a faire plus tard)
 ```
